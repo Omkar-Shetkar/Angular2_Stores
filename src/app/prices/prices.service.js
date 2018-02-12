@@ -1,6 +1,6 @@
 import { Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { Objservable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export class PricesService {
   constructor(@Inject(Http) http) {
@@ -9,7 +9,7 @@ export class PricesService {
 
   prices() {
     return this.http.get('http://localhost:8080/prices')
-      .map(response => extractData(response))
+      .map(response => this.extractData(response))
       .catch(error => Observable.throw(error.message));
   }
 

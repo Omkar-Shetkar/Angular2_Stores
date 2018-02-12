@@ -1,0 +1,8 @@
+Exercising the service
+========================
+var providers = mainstoreapp.HttpModule.decorators[0].args[0].providers;
+var injector = mainstoreapp.ReflectiveInjector.resolveAndCreate(providers);
+var http = injector.get(mainstoreapp.Http);
+var service = new mainstoreapp.PricesService(http);
+var result = service.prices();
+result.subscribe(data => console.log(data), err => console.log(err), () => console.log("DONE"));
