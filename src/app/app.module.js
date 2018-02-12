@@ -5,6 +5,8 @@ import { RouterModule} from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PricesComponent } from './prices/prices.component';
+import { SortByNamePipe } from './prices/sortbyname.pipe'
+import { SortByPricePipe } from './prices/sortbyprice.pipe'
 
 @NgModule({
   imports: [
@@ -12,7 +14,7 @@ import { PricesComponent } from './prices/prices.component';
     FormsModule,
     HttpModule
   ],
-  declarations: [ PricesComponent ],
+  declarations: [ PricesComponent, SortByNamePipe, SortByPricePipe ],
   providers: [],
   bootstrap: [ PricesComponent ]
 })

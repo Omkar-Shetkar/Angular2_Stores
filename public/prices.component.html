@@ -4,7 +4,7 @@ Number of Products: {{ products.length }}
 <table border="1">
 <tr><th>Name</th><th>Description</th><th>Price</th></tr>
 
-<tr *ngFor="let product of products">
+<tr *ngFor="let product of products | sortbyname">
   <td>{{ product.name }}</td>
   <td>{{ product.description }}</td>
   <td>{{ product.price | currency:"INR":true}}</td>
