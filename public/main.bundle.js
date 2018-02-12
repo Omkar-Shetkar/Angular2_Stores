@@ -92319,16 +92319,13 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
   selector: 'contents',
   templateUrl: './prices.component.html'
 }), _dec(_class = function PricesComponent() {
-  var _this = this;
-
   _classCallCheck(this, PricesComponent);
 
-  this.message = '...';
-  this.products = [{ name: 'Milk', description: '2% Reduced Fat', price: 3.57 }];
-
-  setTimeout(function () {
-    return _this.products[0].description = _this.products[0].description.toUpperCase();
-  }, 5000);
+  this.products = [{
+    name: 'Milk',
+    description: '2% Reduced Fat',
+    price: 3.57
+  }];
 }) || _class);
 
 /***/ })
