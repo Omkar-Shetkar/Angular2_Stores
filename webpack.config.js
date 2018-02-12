@@ -19,6 +19,7 @@ let entry = {
 let output = {
   path: path.resolve(process.cwd(), 'public'),
   filename: '[name].bundle.js',
+  library: '[name]storeapp',
   sourceMapFilename: '[name].map',
   chunkFilename: '[id].chunk.js'
 };
