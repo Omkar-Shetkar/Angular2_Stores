@@ -12,13 +12,8 @@ export class PricesComponent {
     ];
 
     setTimeout(
-      () => {
-        this.message = 'changed';
-        this.products = [
-          {name: 'Milk', description: '2% Reduced Fat', price: 3.57},
-          {name: 'Milk', description: '2% Reduced Fat, Skimmed', price: 4.57}
-        ];
-      }
+      () =>
+        this.products[0].description = this.products[0].description.toUpperCase()
       , 5000);
   }
 }
