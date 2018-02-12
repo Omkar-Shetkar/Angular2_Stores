@@ -92319,9 +92319,17 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
   selector: 'contents',
   templateUrl: './prices.component.html'
 }), _dec(_class = function PricesComponent() {
+  var _this = this;
+
   _classCallCheck(this, PricesComponent);
 
+  this.message = '...';
   this.products = [{ name: 'Milk', description: '2% Reduced Fat', price: 3.57 }];
+
+  setTimeout(function () {
+    _this.message = 'changed';
+    _this.products = [{ name: 'Milk', description: '2% Reduced Fat', price: 3.57 }, { name: 'Milk', description: '2% Reduced Fat, Skimmed', price: 4.57 }];
+  }, 5000);
 }) || _class);
 
 /***/ })
