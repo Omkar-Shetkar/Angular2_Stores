@@ -6,12 +6,10 @@ import {
   name: 'sortbyname'
 })
 export class SortByNamePipe {
-  transform(products) {
+  transform(products, isReverseOrder = false) {
+    let factor = isReverseOrder ? -1 : 1;
     let byName = (product1, product2) => {
-      var result = product1.name.localeCompare(product2.name);
-      if (result === 0)
-        return product1.price > product2.price;
-      return result;
+      return product1.name.localeCompare(product2.name) * factor;
     };
 
     return products.slice().sort(byName);

@@ -26276,6 +26276,7 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
 }), _dec(_class = function PricesComponent() {
   _classCallCheck(this, PricesComponent);
 
+  this.reversed = false;
   this.products = [{
     name: 'Milk',
     description: '2% Reduced Fat',
@@ -26288,10 +26289,6 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
     name: 'Apple Juice',
     description: '1 gallon delightful',
     price: 2.99
-  }, {
-    name: 'Milk',
-    description: '2% Reduced Fat',
-    price: 3.57
   }];
 }) || _class);
 
@@ -34621,10 +34618,11 @@ var SortByNamePipe = exports.SortByNamePipe = (_dec = (0, _core.Pipe)({
   _createClass(SortByNamePipe, [{
     key: 'transform',
     value: function transform(products) {
+      var isReverseOrder = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+      var factor = isReverseOrder ? -1 : 1;
       var byName = function byName(product1, product2) {
-        var result = product1.name.localeCompare(product2.name);
-        if (result === 0) return product1.price > product2.price;
-        return result;
+        return product1.name.localeCompare(product2.name) * factor;
       };
 
       return products.slice().sort(byName);

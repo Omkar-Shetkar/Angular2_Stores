@@ -8,6 +8,7 @@ import {
 })
 export class PricesComponent {
   constructor() {
+    this.reversed = false;
     this.products = [{
       name: 'Milk',
       description: '2% Reduced Fat',
@@ -22,11 +23,6 @@ export class PricesComponent {
       name: 'Apple Juice',
       description: '1 gallon delightful',
       price: 2.99
-    },
-    {
-      name: 'Milk',
-      description: '2% Reduced Fat',
-      price: 3.57
     }];
 
   }
