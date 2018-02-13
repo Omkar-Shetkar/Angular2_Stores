@@ -8,9 +8,14 @@ export class PricesService {
   }
 
   prices() {
+    // return this.http.get('http://localhost:8080/prices')
+    //   .map(response => this.extractData(response))
+    //   .catch(error => Observable.throw(error.message));
+
     return this.http.get('http://localhost:8080/prices')
-      .map(response => this.extractData(response))
-      .catch(error => Observable.throw(error.message));
+            .toPromise()
+            .then(response => this.extractData(response))
+            .catch(error => { throw new Error(error.message); })
   }
 
   extractData(response) {

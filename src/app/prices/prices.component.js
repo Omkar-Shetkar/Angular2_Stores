@@ -14,9 +14,13 @@ export class PricesComponent {
   }
 
   ngOnInit() {
+    // this.service.prices()
+    //     .subscribe(data => this.updateData(data),
+    //               error => this.updateError(error));
+
     this.service.prices()
-        .subscribe(data => this.updateData(data),
-                  error => this.updateError(error));
+        .then(data => this.updateData(data))
+        .catch(error => this.updateError(error));
   }
 
   updateData(data) {
