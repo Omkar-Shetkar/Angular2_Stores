@@ -16,8 +16,8 @@ export class PricesService {
   extractData(response) {
     if(response.status === 200)
       return response.json();
-
-    throw new Error('invalid response');
+    else
+      throw new Error('invalid response');
   }
 
 }

@@ -1,12 +1,10 @@
-<p>Message: {{ message }}</p>
-Number of Products: {{ products.length }}
-<br/>
-In reverse order: <input type="checkbox" [(ngModel)]="reversed"/>
-<br/>
+<div class="error">{{ message }}</div>
+<div>Number of Products: {{ products.length }}</div>
+
 <table border="1">
 <tr><th>Name</th><th>Description</th><th>Price</th></tr>
 
-<tr *ngFor="let product of products | sortbyname:reversed">
+<tr *ngFor="let product of products">
   <td>{{ product.name }}</td>
   <td>{{ product.description }}</td>
   <td>{{ product.price | currency:"INR":true}}</td>
