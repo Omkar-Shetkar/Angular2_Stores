@@ -112291,8 +112291,7 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
   }, {
     key: 'updateShow',
     value: function updateShow(event) {
-      this.show = event;
-      console.log("update show called..." + event);
+      console.log("updateShow called..." + event);
     }
   }]);
 
