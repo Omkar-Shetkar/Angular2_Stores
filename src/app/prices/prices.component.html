@@ -1,4 +1,11 @@
-<div class="error">{{ message }}</div>
+<div>{{ message }}</div>
+
+<input type="checkbox" [ngModel]="show" (ngModelChange)="updateShow($event)"/>
+Show?
+
+<div>{{show}}</div>
+
+{{ messagefield }}
 <div>Number of Products: {{ products.length }}</div>
 
 <table border="1">

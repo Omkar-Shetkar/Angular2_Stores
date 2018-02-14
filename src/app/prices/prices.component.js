@@ -11,7 +11,9 @@ export class PricesComponent {
     this.service = service;
     this.message = '';
     this.products = [];
+    this.show =true;
   }
+
 
   ngOnInit() {
     // this.service.prices()
@@ -29,5 +31,10 @@ export class PricesComponent {
 
   updateError(error) {
     this.message = error;
+  }
+
+  updateShow(event) {
+    this.show =event;
+    console.log("update show called..." + event);
   }
 }
