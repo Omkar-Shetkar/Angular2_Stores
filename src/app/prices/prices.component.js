@@ -11,7 +11,9 @@ export class PricesComponent {
     this.service = service;
     this.message = '';
     this.products = [];
-    this.show =true;
+
+    this.selectedItem = 'Water';
+    this.items = ['Coffee', 'Tea', 'Water'];
   }
 
 
@@ -32,10 +34,5 @@ export class PricesComponent {
   updateError(error) {
     this.message = error;
   }
-
-  updateShow(event) {
-    console.log("updateShow called..."+event);
-  }
-
 
 }

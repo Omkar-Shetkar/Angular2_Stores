@@ -1,10 +1,10 @@
-<div>{{ message }}</div>
 
-<input type="checkbox" [(ngModel)]="show"/>
-Show?
-
-<div>{{show}}</div>
-
+<select [(ngModel)]="selectedItem">
+  <option *ngFor="let item of items" [value]="item">{{item}}</option>
+</select>
+<br/>
+{{selectedItem}}
+<br/>
 {{ messagefield }}
 <div>Number of Products: {{ products.length }}</div>
 

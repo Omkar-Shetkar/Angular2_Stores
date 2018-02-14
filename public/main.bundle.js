@@ -112260,7 +112260,9 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
     this.service = service;
     this.message = '';
     this.products = [];
-    this.show = true;
+
+    this.selectedItem = 'Water';
+    this.items = ['Coffee', 'Tea', 'Water'];
   }
 
   _createClass(PricesComponent, [{
@@ -112287,11 +112289,6 @@ var PricesComponent = exports.PricesComponent = (_dec = (0, _core.Component)({
     key: 'updateError',
     value: function updateError(error) {
       this.message = error;
-    }
-  }, {
-    key: 'updateShow',
-    value: function updateShow(event) {
-      console.log("updateShow called..." + event);
     }
   }]);
 
